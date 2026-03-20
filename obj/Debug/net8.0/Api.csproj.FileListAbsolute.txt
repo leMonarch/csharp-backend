@@ -104,3 +104,4 @@ C:\Users\Louis - Etienne\Desktop\cursor\csharp-backend\backend\obj\Debug\net8.0\
 C:\Users\Louis - Etienne\Desktop\cursor\csharp-backend\backend\obj\Debug\net8.0\Api.pdb
 C:\Users\Louis - Etienne\Desktop\cursor\csharp-backend\backend\obj\Debug\net8.0\Api.genruntimeconfig.cache
 C:\Users\Louis - Etienne\Desktop\cursor\csharp-backend\backend\obj\Debug\net8.0\ref\Api.dll
+C:\Users\Louis - Etienne\Desktop\cursor\csharp-backend\backend\obj\Debug\net8.0\Api.sourcelink.json
