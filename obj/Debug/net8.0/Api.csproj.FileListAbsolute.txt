@@ -105,3 +105,16 @@ C:\Users\Louis - Etienne\Desktop\cursor\csharp-backend\backend\obj\Debug\net8.0\
 C:\Users\Louis - Etienne\Desktop\cursor\csharp-backend\backend\obj\Debug\net8.0\Api.genruntimeconfig.cache
 C:\Users\Louis - Etienne\Desktop\cursor\csharp-backend\backend\obj\Debug\net8.0\ref\Api.dll
 C:\Users\Louis - Etienne\Desktop\cursor\csharp-backend\backend\obj\Debug\net8.0\Api.sourcelink.json
+C:\Users\Louis - Etienne\Desktop\cursor\csharp-backend\backend\bin\Debug\net8.0\Api.Tests\obj\Debug\net8.0\Api.Tests.sourcelink.json
+C:\Users\Louis - Etienne\Desktop\cursor\csharp-backend\backend\bin\Debug\net8.0\Api.Tests\obj\Debug\net8.0\MvcTestingAppManifest.json
+C:\Users\Louis - Etienne\Desktop\cursor\csharp-backend\backend\bin\Debug\net8.0\Api.Tests\bin\Debug\net8.0\Api.deps.json
+C:\Users\Louis - Etienne\Desktop\cursor\csharp-backend\backend\bin\Debug\net8.0\Api.Tests\bin\Debug\net8.0\Api.runtimeconfig.json
+C:\Users\Louis - Etienne\Desktop\cursor\csharp-backend\backend\bin\Debug\net8.0\Api.Tests\bin\Debug\net8.0\Api.Tests.deps.json
+C:\Users\Louis - Etienne\Desktop\cursor\csharp-backend\backend\bin\Debug\net8.0\Api.Tests\bin\Debug\net8.0\Api.Tests.runtimeconfig.json
+C:\Users\Louis - Etienne\Desktop\cursor\csharp-backend\backend\bin\Debug\net8.0\Api.Tests\bin\Debug\net8.0\Api.Tests\obj\Api.Tests.csproj.nuget.dgspec.json
+C:\Users\Louis - Etienne\Desktop\cursor\csharp-backend\backend\bin\Debug\net8.0\Api.Tests\bin\Debug\net8.0\Api.Tests\obj\Debug\net8.0\Api.Tests.sourcelink.json
+C:\Users\Louis - Etienne\Desktop\cursor\csharp-backend\backend\bin\Debug\net8.0\Api.Tests\bin\Debug\net8.0\Api.Tests\obj\Debug\net8.0\MvcTestingAppManifest.json
+C:\Users\Louis - Etienne\Desktop\cursor\csharp-backend\backend\bin\Debug\net8.0\Api.Tests\bin\Debug\net8.0\Api.Tests\obj\project.assets.json
+C:\Users\Louis - Etienne\Desktop\cursor\csharp-backend\backend\bin\Debug\net8.0\Api.Tests\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Louis - Etienne\Desktop\cursor\csharp-backend\backend\bin\Debug\net8.0\Api.Tests\bin\Debug\net8.0\appsettings.json
+C:\Users\Louis - Etienne\Desktop\cursor\csharp-backend\backend\bin\Debug\net8.0\Api.Tests\bin\Debug\net8.0\MvcTestingAppManifest.json

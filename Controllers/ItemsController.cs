@@ -54,6 +54,7 @@ public class ItemsController : ControllerBase
         existing.IsDone = item.IsDone;
         existing.CategoryId = item.CategoryId;
         existing.DueDate = item.DueDate;
+        existing.Priority = item.Priority;
         await _db.SaveChangesAsync(ct);
         return existing;
     }

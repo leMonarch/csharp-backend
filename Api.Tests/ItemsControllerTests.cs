@@ -20,8 +20,12 @@ public class ItemsControllerTests : IClassFixture<WebApplicationFactory<Program>
         {
             builder.ConfigureServices(services =>
             {
-                var descriptor = services.SingleOrDefault(d => d.ServiceType == typeof(AppDbContext));
-                if (descriptor != null) services.Remove(descriptor);
+                // Retirer toutes les inscriptions liées à AppDbContext (sinon les options MySQL restent et les requêtes échouent).
+                var toRemove = services.Where(d =>
+                    d.ServiceType == typeof(AppDbContext) ||
+                    d.ServiceType == typeof(DbContextOptions<AppDbContext>)).ToList();
+                foreach (var d in toRemove) services.Remove(d);
+
                 services.AddDbContext<AppDbContext>(options =>
                     options.UseInMemoryDatabase("TestItems_" + Guid.NewGuid()));
             });
@@ -30,6 +34,8 @@ public class ItemsControllerTests : IClassFixture<WebApplicationFactory<Program>
     }
 
     public Task InitializeAsync() => Task.CompletedTask;
+
+    public Task DisposeAsync() => Task.CompletedTask;
 
     [Fact]
     public async Task GetAll_RetourneListeVide_QuandAucunItem()
@@ -104,6 +110,30 @@ public class ItemsControllerTests : IClassFixture<WebApplicationFactory<Program>
         Assert.NotNull(updated);
         Assert.Equal("Apres", updated.Name);
         Assert.Equal("Nouvelle desc", updated.Description);
+    }
+
+    [Fact]
+    public async Task Update_ModifiePriorite_EtPersisteEnBase()
+    {
+        var item = new Item { Name = "Priorité", Priority = ItemPriority.Normal };
+        var createResponse = await _client.PostAsJsonAsync("/api/items", item);
+        createResponse.EnsureSuccessStatusCode();
+        var created = await createResponse.Content.ReadFromJsonAsync<Item>();
+        Assert.NotNull(created);
+        Assert.Equal(ItemPriority.Normal, created.Priority);
+
+        created.Priority = ItemPriority.High;
+        var updateResponse = await _client.PutAsJsonAsync($"/api/items/{created.Id}", created);
+        updateResponse.EnsureSuccessStatusCode();
+        var updated = await updateResponse.Content.ReadFromJsonAsync<Item>();
+        Assert.NotNull(updated);
+        Assert.Equal(ItemPriority.High, updated.Priority);
+
+        var getResponse = await _client.GetAsync($"/api/items/{created.Id}");
+        getResponse.EnsureSuccessStatusCode();
+        var fromApi = await getResponse.Content.ReadFromJsonAsync<Item>();
+        Assert.NotNull(fromApi);
+        Assert.Equal(ItemPriority.High, fromApi.Priority);
     }
 
     [Fact]
